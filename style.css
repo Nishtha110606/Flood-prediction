@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f4f7fb;
+}
+
+.layout {
+    display: flex;
+}
+
+.sidebar {
+    width: 220px;
+    background: #003461;
+    color: white;
+    padding: 20px;
+}
+
+.main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* SEARCH */
+.search-bar {
+    display: flex;
+    gap: 10px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background: #003461;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+/* CARDS */
+.card {
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.big {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+/* GAUGE */
+.prob-right {
+    width: 150px;
+}
+
+/* MAP */
+#map {
+    height: 400px;
+    border-radius: 10px;
+}

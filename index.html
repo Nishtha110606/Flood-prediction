@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FloodGuard</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h2>🌊 FloodGuard</h2>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+
+        <!-- SEARCH -->
+        <div class="search-bar">
+            <input id="city" placeholder="Search city..." />
+            <button onclick="getPrediction()">Search</button>
+        </div>
+
+        <!-- PROBABILITY -->
+        <div class="card big">
+            <div class="prob-left">
+                <h3>Probability</h3>
+                <p id="status"></p>
+                <p><b id="prob">0</b>%</p>
+            </div>
+
+            <div class="prob-right">
+                <canvas id="gaugeChart"></canvas>
+            </div>
+        </div>
+
+        <!-- STATS -->
+        <div class="grid">
+            <div class="card">🌡 Temp: <span id="temp"></span></div>
+            <div class="card">💧 Humidity: <span id="humidity"></span></div>
+            <div class="card">🌧 Rainfall: <span id="rain"></span></div>
+            <div class="card">🌊 River: <span id="river"></span></div>
+        </div>
+
+        <!-- AI -->
+        <div class="card">
+            <h3>AI Insight</h3>
+            <p id="insight"></p>
+        </div>
+
+        <!-- GRAPH -->
+        <div class="card">
+            <h3>Rainfall Forecast</h3>
+            <canvas id="rainChart"></canvas>
+        </div>
+
+        <!-- MAP -->
+        <div class="card">
+            <h3>Map</h3>
+            <div id="map"></div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+</body>
+</html>
